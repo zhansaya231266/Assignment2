@@ -7,6 +7,10 @@ public class MyArrayList<E> implements MyList<E> {
         this.size = 0;
     }
 
+    public MyArrayList() {
+
+    }
+
     @Override
     public void add(E element) { //adding new element
         if(size >= elements.length) {
