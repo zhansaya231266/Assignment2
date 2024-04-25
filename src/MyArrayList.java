@@ -1,21 +1,21 @@
-public class MyArrayList<T> implements Mylist<T> {
-    private T[] elements;
+public class MyArrayList<E> implements MyList<E> {
+    private E[] elements;
     private int size;
 
-    public MyArrayList(T[] elements, int size) { //declaration
-        this.elements = (T[]) new Object[5];
+    public MyArrayList(E[] elements, int size) { //declaration
+        this.elements = (E[]) new Object[5];
         this.size = 0;
     }
 
     @Override
-    public void add(T element) { //adding new element
+    public void add(E element) { //adding new element
         if(size >= elements.length) {
             increaseBuffer();
         }
         elements[size++] = element;
     }
 
-    public void add(T element, int index) { //adding new element
+    public void add(E element, int index) { //adding new element
         if(size >= elements.length) {
             increaseBuffer();
         }
@@ -24,14 +24,14 @@ public class MyArrayList<T> implements Mylist<T> {
     }
 
     private void increaseBuffer() {
-        T[] newElements = (T[]) new Object[elements.length * 2]; //increasing length of an array
+        E[] newElements = (E[]) new Object[elements.length * 2]; //increasing length of an array
         for(int i = 0; i < size; i++) {
             newElements[i] = elements[i]; //coping an array to the new array
         }
         elements = newElements;
     }
 
-    public T getElem(int index) { //accessing the data
+    public E getElem(int index) { //accessing the data
         checkIndex(index);
         return elements[index];
     }
@@ -56,7 +56,7 @@ public class MyArrayList<T> implements Mylist<T> {
     }
 
     public void clear() {
-        elements = (T[]) new Object[5];
+        elements = (E[]) new Object[5];
         size = 0;
     }
     private void checkIndex(int index) {

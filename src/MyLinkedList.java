@@ -1,4 +1,3 @@
-
 public class MyLinkedList<E> implements MyList<E> {
     private class MyNode<E> {
         E data;

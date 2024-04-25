@@ -1,5 +1,5 @@
 public class Node<T> {
-    T data;
+    E data;
     Node next;
 
     public Node(T data) {
