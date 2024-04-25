@@ -11,8 +11,8 @@ public class MyLinkedList<E> implements MyList<E> {
         }
     }
 
-    private MyNode head;
-    private MyNode tail;
+    private MyNode<E> head;
+    private MyNode<E> tail;
     private int size;
 
     public MyLinkedList() {
