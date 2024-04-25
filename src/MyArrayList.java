@@ -1,8 +1,8 @@
 public class MyArrayList<T> implements Mylist<T> {
-    private Object[] elements;
+    private T[] elements;
     private int size;
 
-    public MyArrayList(Object[] elements, int size) {
+    public MyArrayList(T[] elements, int size) {
         this.elements = (T[]) new Object[5];
         this.size = 0;
     }
@@ -26,7 +26,7 @@ public class MyArrayList<T> implements Mylist<T> {
     private void increaseBuffer() {
         T[] newElements = (T[]) new Object[elements.length * 2];
         for(int i = 0; i < size; i++) {
-            newElements = elements[i];
+            newElements[i] = elements[i];
         }
         elements = newElements;
     }
@@ -56,7 +56,7 @@ public class MyArrayList<T> implements Mylist<T> {
     }
 
     public void clear() {
-        elements = (T[] new Object[5]);
+        elements = (T[]) new Object[5];
         size = 0;
     }
     private void checkIndex(int index) {
@@ -64,6 +64,5 @@ public class MyArrayList<T> implements Mylist<T> {
             throw new IndexOutOfBoundsException("Index is not correct");
         }
     }
-
 }
 
