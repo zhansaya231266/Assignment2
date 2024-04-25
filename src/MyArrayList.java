@@ -19,9 +19,7 @@ public class MyArrayList<T> implements Mylist<T> {
         if(size >= elements.length) {
             increaseBuffer();
         }
-        if(index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index is not correct");
-        }
+        checkIndex(index);
         elements[index] = element;
     }
 
@@ -34,9 +32,7 @@ public class MyArrayList<T> implements Mylist<T> {
     }
 
     public T getElem(int index) {
-        if(index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index is not correct");
-        }
+        checkIndex(index);
         return elements[index];
     }
 
@@ -52,9 +48,7 @@ public class MyArrayList<T> implements Mylist<T> {
     }
 
     public void remove(int index) {
-        if(index < 0 || index >= size) {
-            throw new IndexOutOfBoundsException("Index is not correct");
-        }
+        checkIndex(index);
         for(int i = index + 1; i < size; i++) {
             elements[i - 1] = elements[i];
         }
@@ -64,6 +58,11 @@ public class MyArrayList<T> implements Mylist<T> {
     public void clear() {
         elements = (T[] new Object[5]);
         size = 0;
+    }
+    private void checkIndex(int index) {
+        if(index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index is not correct");
+        }
     }
 
 }
