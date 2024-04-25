@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        MyLinkedList myLinkedList = new MyLinkedList<>();
+        MyLinkedList<Integer> myLinkedList = new MyLinkedList<>();
 
         myLinkedList.add(1);
         myLinkedList.add(2);
@@ -13,13 +13,13 @@ public class Main {
 
         System.out.println("Value of index 3: " + myLinkedList.getElem(3));
         System.out.println("Size of an list: " + myLinkedList.size());
-        System.out.println("Vaule of index 0 before remove: " + myLinkedList.getElem(0));
+        System.out.println("Value of index 0 before remove: " + myLinkedList.getElem(0));
         myLinkedList.remove(0);
-        System.out.println("Vaule of index 0 after remove: " + myLinkedList.getElem(0));
+        System.out.println("Value of index 0 after remove: " + myLinkedList.getElem(0));
         System.out.println("Size of an list: " + myLinkedList.size());
-        System.out.println("Vaule of index 2 before remove: " + myLinkedList.getElem(2));
+        System.out.println("Value of index 2 before remove: " + myLinkedList.getElem(2));
         myLinkedList.remove(2);
-        System.out.println("Vaule of index 2 after remove: " + myLinkedList.getElem(2));
+        System.out.println("Value of index 2 after remove: " + myLinkedList.getElem(2));
         System.out.println("Size of an list: " + myLinkedList.size());
 
     }

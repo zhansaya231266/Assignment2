@@ -23,7 +23,7 @@ public class MyLinkedList<E> implements MyList<E> {
     }
 
     @Override
-    public void add(E element) {
+    public void add(E element) {  //adding a new Node when tail is stored
         MyNode<E> newNode = new MyNode<>(element);
         if(head == null) {
             head = newNode;
@@ -37,7 +37,7 @@ public class MyLinkedList<E> implements MyList<E> {
         size++;
     }
 
-    public E getElem(int index) {
+    public E getElem(int index) {  //retrieving the data
         checkIndex(index);
         MyNode<E> currentNode = head;
         if(index == 0) {
@@ -51,11 +51,11 @@ public class MyLinkedList<E> implements MyList<E> {
         return currentNode.data;
     }
 
-    public int size() {
+    public int size() { //getting size
         return size;
     }
 
-    public void remove(int index) {
+    public void remove(int index) {  //removing
         checkIndex(index);
         MyNode<E> currentNode = head;
         for(int i = 0; i < index; i++) {
