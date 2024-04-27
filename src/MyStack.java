@@ -16,11 +16,11 @@ public class MyStack<E> {
         return list.getElem(list.size() - 1);
     }
 
-    public E pop() {
+    public void pop() {
         if(isEmpty()) {
             throw new IllegalStateException("Stack is empty");
         }
-        return list.remove(list.size() - 1);
+        list.remove(list.size() - 1);
     }
 
     public boolean isEmpty() {
