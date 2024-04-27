@@ -1,7 +1,7 @@
-public class MyStack<E> {
+public class MyStackAL<E> {
     private MyArrayList<E> list;
 
-    public MyStack() {
+    public MyStackAL() {
         list = new MyArrayList<>();
     }
 
