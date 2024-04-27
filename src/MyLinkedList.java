@@ -178,4 +178,18 @@ public class MyLinkedList<E> implements MyList<E> {
             throw new IndexOutOfBoundsException("Index is not correct");
         }
     }
+
+    public void swap(int i, int j) {
+        MyNode currentI = head;
+        MyNode currentJ = head;
+        for (int index = 0; index < j; index++) {
+            if (index < i) {
+                currentI = currentI.next;
+            }
+            currentJ = currentJ.next;
+        }
+        E tempData = (E) currentI.data;
+        currentI.data = currentJ.data;
+        currentJ.data = tempData;
+    }
 }
